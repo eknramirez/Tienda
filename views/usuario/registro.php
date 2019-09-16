@@ -1,6 +1,6 @@
-<h1>Registrarse</h1>
-<form action="index.php?controller=usuario&action=save" method="POST"> <!--metodo para llamar *-->
-
+<h1>Registrarse</h1> <!--Opcion de registrarse etiqueta para titulo-->
+<form action=<?=base_url?>usuario/save method="POST"> <!--metodo para llamar *-->
+<!-- Etiquetas para la creacion de un formulari0 para el cliente.-->
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" required/>
 
@@ -10,10 +10,9 @@
     <label for="email">Email</label>
     <input type="text" name="email" required/>
 
-    <label for="password">Contraseña</label>
-    <input type="password" name="password" required/>
-
-    <input type="submit" value="Registrarse" />
+    <label for="Correo">Contraseña</label>
+    <input type="password" name="correo" required/>
+     <input type="submit" value="Registrarse" />
 </form>
 
 

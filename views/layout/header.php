@@ -15,7 +15,7 @@
         <div id="logo">
             <img src="<?=base_url?>assets/Imagenes/mortal.jpg" alt="Mortal Kombat" />
             <a href="Paginaweb.php">
-                <br>Tienda De Juegos Online.</br>
+                <br>Store Game  </br>
             </a>
         </div>
     </header>

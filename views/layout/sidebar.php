@@ -6,7 +6,7 @@
                     <label for="Email">Email</label>
                     <input for="Email" name="Email" />
                     <label for="password">Contraseña</label>
-                    <input for="password" name="password" />
+                    <input type="password" name="password" />
                     <input type="submit" value="Enviar" /><!-- Permite dar la orden de enviar la informacion de los formularios.-->
                 </form>
                 <ul>

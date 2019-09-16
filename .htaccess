@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c> 
 #activar rewrite 
 
+
 RewriteEngine on
 ErrorDocument 404 http://localhost/master_PhP/Proyecto-php-poo/error/
 RewriteCond %{SCRIPT_FILENAME} !-d

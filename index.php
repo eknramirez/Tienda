@@ -1,6 +1,10 @@
  <?php
- 
-require_once 'autoload.php';
+ /*
+ * Lugar o vista principal donde se llaman metodos. o vistas por medio de los controladores.
+ */
+ session_start();
+ require_once 'autoload.php';
+ require_once 'config/db.php';
 require_once 'config/parameters.php'; #llamado de la base url desde parametros.php
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php'; //llamado o requerimeinto a la vistar y a barra lateral sidebar
@@ -10,7 +14,7 @@ function Show_error( ){ // funcion de error
         $error ->index( );
 }
 
-if(isset($_GET["controller"] ) ) {
+if(isset($_GET["controller"] ) ) { //metodo o llamado par pedir controladores
        $nombre_controlador = $_GET["controller"]."controller";
 }elseif( !isset($_GET["controller"]) &&  !isset($_GET["action"])){
     $nombre_controlador = controller_default;
@@ -38,6 +42,4 @@ if(class_exists($nombre_controlador)){
         }else{
             Show_error( );
     }
-require_once 'views/layout/footer.php';
-            
-
+require_once 'views/layout/footer.php'; 

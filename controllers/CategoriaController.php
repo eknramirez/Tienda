@@ -1,4 +1,7 @@
 <?php
+/*
+ * clase creada como controlador de Categorias.
+ */
 class categoriaController{
     public function index( ) {
         echo "controlador Categorias accion index";
