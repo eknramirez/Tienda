@@ -2,7 +2,7 @@
     <?php
     
 function controllers_autoload($classname){
-    include 'controllers/'.$classname.'.php';
+    include 'controllers/'.$classname. '.php';
     
 }
 

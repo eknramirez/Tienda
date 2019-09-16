@@ -22,19 +22,19 @@ function getId() {
 }
 # datos suceptibles, limpiados y escqapados.
  function getNombre() {
-    return $this->db->real_escape_string($this->nombre);
+    return ($this->nombre);
 }
 
  function getApellido() {
-    return $this->db->real_escape_string($this->apellido);
+    return $this->apellido;
 }
 
  function getEmail() {
-    return $this->db->real_escape_string($this->email);
+    return $this->email;
 }
 
  function getPassword() {
-    return password_hash($this->db->real_escape_string($this->password),PASSWORD_BCRYPT,['cost'=>4]);
+    return  $this->password;
     }
 
  function getRol() {
@@ -50,19 +50,19 @@ function getId() {
 }
 
  function setNombre($nombre) {
-    $this->nombre = $nombre;
+    $this->nombre =$this->db->real_escape_string( $nombre);
 }
 
  function setApellido($apellido) {
-    $this->apellido = $apellido;
+    $this->apellido = $this->db->real_escape_string($apellido);
 }
 
  function setEmail($email) {
-    $this->email = $email;
+    $this->email =$this->db->real_escape_string( $email);
 }
 
  function setPassword($password) {
-    $this->password = $password;
+    password_hash($this->db->real_escape_string($this->password),PASSWORD_BCRYPT,['cost'=>4]);
 }
 
  function setRol($rol) {

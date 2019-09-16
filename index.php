@@ -1,13 +1,15 @@
  <?php
- /*
- * Lugar o vista principal donde se llaman metodos. o vistas por medio de los controladores.
- */
+ 
  session_start();
  require_once 'autoload.php';
  require_once 'config/db.php';
 require_once 'config/parameters.php'; #llamado de la base url desde parametros.php
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php'; //llamado o requerimeinto a la vistar y a barra lateral sidebar
+require_once 'views/usuario/registro.php';
+
+//conexion a la base de datos
+//$db = Database::connect();
 
 function Show_error( ){ // funcion de error 
      $error =new errorController( );  // creacion del error en una nueva instancia de errosController
