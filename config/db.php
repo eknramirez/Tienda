@@ -1,8 +1,9 @@
 <?php
 class Database{ // coneccion a la base de datos.//
     public static function connect ( ){
-        $db = new mysqli('localhost', 'root',' ','tienda_online');
+        $db = new mysqli('127.0.0.1', 'root','','tienda_online');
         $db->query("SET NAMES 'utf' ");
+ 
         return $db;
     }
 }

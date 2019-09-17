@@ -78,7 +78,6 @@ public function save(){
     $save = $this->db->query($sql);
     
     $result =false;
-   
     if($save){
         $result = true;
     }

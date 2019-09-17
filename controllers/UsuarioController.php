@@ -15,11 +15,12 @@ class usuarioController {
          if(isset($_POST)){
              $usuario= new Usuario();
              $usuario->setNombre($_POST['nombre']);
-             $usuario->setApellido($_POST['apellido']);
+             
+             $usuario->setApellido($_POST['apellidos']);
              $usuario->setEmail($_POST['email']);
              $usuario->setPassword($_POST['password']);
             
-            #var_dump($_POST);
+            var_dump($usuario);
         }
         
     }
