@@ -1,9 +1,9 @@
  <?php
- 
  session_start();
  require_once 'autoload.php';
  require_once 'config/db.php';
 require_once 'config/parameters.php'; #llamado de la base url desde parametros.php
+require_once'helpers/utils.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php'; //llamado o requerimeinto a la vistar y a barra lateral sidebar
 #require_once 'views/usuario/registro.php'; // llamar en la secion deinicio el usuario.

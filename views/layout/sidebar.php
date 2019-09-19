@@ -2,7 +2,7 @@
         <aside id="Lateral"> <!-- Permite hacer una barra lateral en la pagina web-->
             <div id="Login" class="block_aside">
                 <h3> Ingresar a la Web </h3>
-                <form action="#" method="post">
+                <form action="<?=base_url?>usuario/login" method="post">
                     <label for="Email">Email</label>
                     <input for="Email" name="Email" />
                     <label for="password">Contraseña</label>
