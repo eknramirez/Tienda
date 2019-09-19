@@ -92,11 +92,11 @@ class Usuario {
         $email =$this->email;
         $password = $this->password;
         // coprobar si existe el usuario.
-        $sql = "SELECT id, password FROM usuario WHERE email ='$email' ";
+        $sql = "SELECT id, password FROM usuarios WHERE email ='$email' ";
         $login = $this->db->query($sql);
 
         if ($login && $login->num_rows== 1) {
-            $usuario = $login->fetch_objet();
+            $usuario = $login->fetch_object();
 
             //erificar la contraseña ingresada.
             $verify = password_verify($password, $usuario->password);

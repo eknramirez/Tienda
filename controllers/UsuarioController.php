@@ -56,12 +56,22 @@ class usuarioController {
             //identificar el usuario.
             // realizar consulta a la base de datos para comprbar credenciales
             $usuario = new Usuario();
-            $usuario->setEmail($_POST['password']);
+            $usuario->setEmail($_POST['Email']);
             $usuario->setPassword($_POST['password']);
             
             $identify=$usuario->login();
-            var_dump($identify);
-            die();
+            #var_dump($identify);
+            #die();
+             if($identify && is_object($identify)){
+                 $_SESSION['identity'] = $identify;
+                 
+                 if($identify->role =='admin'){
+                     $_SESSION['admin']= true;
+                 }
+             }else{
+                 $_SESSION['error_login'] = 'Identificacion Fallida';
+                 }
+        
          
             // crear una secion
         }

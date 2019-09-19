@@ -29,7 +29,7 @@
                     <a href="#">Inicio</a>
                 </li>
                  <li>
-                    <a href="#">Juegos Gratis</a>
+                    <a href="#">Registro</a>
                 </li>
                  <li>
                     <a href="#">Blatte Royal</a>
